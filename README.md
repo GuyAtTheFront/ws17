@@ -2,7 +2,7 @@
 # Workshop17
 
 ## models
-* Ignore all annotations on in Models, there unless you want to learn Jackson
+* Ignore all annotations on in Models, unless you want to learn Jackson
 * The model structure is more complicated than necessary because I was testing Jackson
 
 ## WeatherService.java
