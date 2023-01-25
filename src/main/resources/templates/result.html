@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div data-th-object="${weather}">
+        <h1 data-th-text="*{name} + ' at ' + *{dt}"/>
+        <img src="#" data-th-src="@{'http://openweathermap.org/img/wn/' + *{details.get(0).icon} + '@2x.png'}" />
+        <h2 data-th-text="Weather"></h2>
+        <ul>
+            <li data-th-text="*{details.get(0).main}"></li>
+            <li data-th-text="*{details.get(0).description}"></li>
+            <li data-th-text="*{details.get(0).icon}"></li>
+        </ul>
+
+        <h2 data-th-text="Main"></h2>
+        <ul>
+            <li data-th-text="'Temperature: ' + *{main.temp}"></li>
+            <li data-th-text="'Feels like: ' + *{main.feels_like}"></li>
+            <li data-th-text="'Min: ' + *{main.temp_min}"></li>
+            <li data-th-text="'Max: ' + *{main.temp_max}"></li>
+        </ul>
+
+        <h2 data-th-text="Sys"></h2>
+        <ul>
+            <li data-th-text="'Sunrise: ' + *{sys.sunrise}"></li>
+            <li data-th-text="'Sunset: ' + *{sys.sunset}"></li>
+        </ul>
+
+
+
+
+
+    </div>
+    <!-- <span data-th-text="${weather.details.get(0).main}"/> -->
+</body>
+</html>
